@@ -41,34 +41,25 @@
             font-weight: 400;
             font-style: normal;
         }
-
-        /* NotoSansCJK */
-        @font-face {
-            font-family: 'NotoSansCJK';
-            src: url('https://reforged.voltaccept.com/assets/fonts/notosanscjk-regular.ttc') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta name="description" content="An unofficial port of Vienna to .NET - Reviving Minecraft Earth">
-    <meta name="keywords" content="minecraft, minecraft earth, minecraft earth revival, viennadotnet, vienna .net">
+    <meta name="description" content="Replacement server for Minecraft Earth™, based on Vienna">
+    <meta name="keywords" content="minecraft, minecraft earth, minecraft earth revival, solace, vienna .net">
     <meta name="author" content="Earth Restored Team">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Security-Policy"
         content="default-src *; script-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline'; img-src * data: blob:; font-src * data:; connect-src *; frame-src *;">
     <meta property="og:title" content="Earth Restored">
-    <meta property="og:description" content="An unofficial port of Vienna to .NET - Reviving Minecraft Earth">
+    <meta property="og:description" content="Replacement server for Minecraft Earth™, based on Vienna">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://reforged.voltaccept.com">
+    <meta property="og:url" content="https://earth-restored.github.io/">
     <meta property="og:image" content="assets/icon/banner.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Earth Restored">
-    <meta name="twitter:description" content="An unofficial port of Vienna to .NET - Reviving Minecraft Earth">
+    <meta name="twitter:description" content="Replacement server for Minecraft Earth™, based on Vienna">
     <!-- Google tag (gtag.js) - REMOVED -->
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#6b8e23">
+    <meta name="theme-color" content="#004CB7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="MCEarth">
@@ -76,10 +67,59 @@
     <link rel="apple-touch-icon" sizes="152x152">
     <link rel="apple-touch-icon" sizes="180x180">
     <link rel="apple-touch-icon" sizes="167x167">
-    <meta name="msapplication-TileColor" content="#6b8e23">
+    <meta name="msapplication-TileColor" content="#004CB7">
     <meta name="msapplication-TileImage" content="icon-192.png">
     <meta name="msapplication-config" content="none">
     <style>
+        :root {
+            /* Background Colors */
+            --bg-container: #2a2a2a;
+            --bg-dark: #1a1a1a;
+            --bg-darker: #5a4a3a;
+            
+            /* Text Colors */
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --text-accent-bright: #0094FF;
+            --text-accent-cyan: #13A7FF;
+            --text-white: white;
+            --text-hover-green: #66b3ff;
+            
+            /* Blue Accent Colors */
+            --blue-bright: #0195FF;
+            --blue-medium: #006CD7;
+            --blue-dark: #004CB7;
+            --blue-darker: #003AA5;
+            
+            /* Discord Purple */
+            --discord-purple: #5865F2;
+            --discord-purple-dark: #4752c4;
+            --discord-purple-darker: #2e3799;
+            --discord-purple-darkest: #3d47a0;
+            
+            /* Border Colors */
+            --border-dark: #3a3a3a;
+            
+            /* Accent Colors */
+            --accent-green-dark: #003d8f;
+            --accent-green-bright: #0088f0;
+            
+            /* Semi-transparent Colors */
+            --overlay-light: rgba(0, 0, 0, 0.45);
+            --overlay-medium: rgba(0, 0, 0, 0.65);
+            --overlay-dark: rgba(0, 0, 0, 0.7);
+            --overlay-subtle-1: rgba(0, 0, 0, 0.2);
+            --overlay-subtle-2: rgba(0, 0, 0, 0.15);
+            --overlay-subtle-3: rgba(0, 0, 0, 0.3);
+            --overlay-subtle-4: rgba(0, 0, 0, 0.1);
+            --overlay-subtle-5: rgba(0, 0, 0, 0.4);
+            --white-translucent-1: rgba(255, 255, 255, 0.15);
+            --white-translucent-2: rgba(255, 255, 255, 0.4);
+            --discord-glow: rgba(88, 101, 242, 0.35);
+            --blue-glow: #0094FF99;
+            --blue-glow-faint: #0094FF4d;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -87,7 +127,7 @@
         }
 
         body {
-            font-family: 'Minecraft', 'NotoSans', 'NotoSansCJK', monospace;
+            font-family: 'Minecraft', 'NotoSans', monospace;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -142,7 +182,7 @@
         @media (max-width: 480px) {
             body {
                 padding: 5px;
-                font-size: 13px;
+                font-size: 12px;
             }
         }
 
@@ -289,7 +329,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.45);
+            background: var(--overlay-light);
             pointer-events: none;
             z-index: 0;
         }
@@ -311,14 +351,14 @@
         }
 
         body::before {
-            background: rgba(0, 0, 0, 0.65);
+            background: var(--overlay-medium);
         }
 
         .container {
-            background: #2a2a2a;
-            color: #e0e0e0;
-            border-color: #1a1a1a;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7), inset 0 0 0 4px #3a3a3a;
+            background: var(--bg-container);
+            color: var(--text-primary);
+            border-color: var(--bg-dark);
+            box-shadow: 0 8px 24px var(--overlay-dark), inset 0 0 0 4px var(--border-dark);
             border-radius: 4px;
             max-width: 1000px;
             width: 100%;
@@ -328,7 +368,7 @@
             z-index: 1;
             max-height: 90vh;
             overflow-y: auto;
-            border: 4px solid #1a1a1a;
+            border: 4px solid var(--bg-dark);
         }
 
         .container::-webkit-scrollbar {
@@ -336,15 +376,15 @@
         }
 
         .container::-webkit-scrollbar-track {
-            background: #1a1a1a;
+            background: var(--bg-dark);
             border-radius: 0px;
-            border: 2px solid #3a3a3a;
+            border: 2px solid var(--border-dark);
         }
 
         .container::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #7cb342 0%, #558b2f 100%);
+            background: linear-gradient(180deg, var(--blue-bright) 0%, var(--blue-medium) 100%);
             border-radius: 0px;
-            border: 2px solid #33691e;
+            border: 2px solid var(--blue-darker);
         }
 
         
@@ -352,7 +392,7 @@
 
         h1 {
             text-align: center;
-            color: #8bc34a;
+            color: var(--text-accent-bright);
             margin-bottom: 10px;
             font-size: 2.5rem;
             margin-top: 60px;
@@ -360,13 +400,13 @@
             font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 4px;
-            text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
-            filter: drop-shadow(0 4px 12px rgba(139, 195, 74, 0.6)), drop-shadow(0 0 30px rgba(139, 195, 74, 0.3));
+            text-shadow: 3px 3px 0 var(--overlay-subtle-1);
+            filter: drop-shadow(0 4px 12px var(--blue-glow)), drop-shadow(0 0 30px var(--blue-glow-faint));
         }
 
         .subtitle {
             text-align: center;
-            color: #b0b0b0;
+            color: var(--text-secondary);
             margin-bottom: 20px;
             font-size: 1.1rem;
             font-family: 'Minecraft', 'Minecraft', sans-serif;
@@ -384,9 +424,9 @@
             align-items: center;
             gap: 10px;
             padding: 15px 30px;
-            background: #5865F2;
-            color: white;
-            border: 3px solid #4752c4;
+            background: var(--discord-purple);
+            color: var(--text-white);
+            border: 3px solid var(--discord-purple-dark);
             border-radius: 2px;
             font-size: 1.05rem;
             font-weight: 900;
@@ -394,16 +434,16 @@
             cursor: pointer;
             transition: all 0.15s;
             text-decoration: none;
-            box-shadow: 0 5px 0 #2e3799, 0 0 18px rgba(88, 101, 242, 0.35);
+            box-shadow: 0 5px 0 var(--discord-purple-darker), 0 0 18px var(--discord-glow);
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+            text-shadow: 0 2px 0 var(--overlay-subtle-5);
         }
 
         .discord-btn:hover {
-            background: #4752c4;
+            background: var(--discord-purple-dark);
             transform: translateY(-2px);
-            box-shadow: 0 7px 0 #3d47a0;
+            box-shadow: 0 7px 0 var(--discord-purple-darkest);
         }
 
         .discord-btn:active {
@@ -417,28 +457,28 @@
 
         .section-title {
             font-size: 1.5rem;
-            color: #81c784;
+            color: var(--text-accent-cyan);
             font-weight: 800;
             margin-bottom: 15px;
             padding-bottom: 10px;
-            border-bottom: 4px solid #6b8e23;
+            border-bottom: 4px solid var(--blue-dark);
             font-family: 'Minecraft', 'Minecraft', sans-serif;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
         .info-card {
-            background: #1a1a1a;
+            background: var(--bg-dark);
             padding: 20px;
             border-radius: 4px;
             margin-bottom: 20px;
-            border: 3px solid #3a3a3a;
-            box-shadow: 0 6px 0 #1a1a1a, 0 8px 20px rgba(0, 0, 0, 0.2);
+            border: 3px solid var(--border-dark);
+            box-shadow: 0 6px 0 var(--bg-dark), 0 8px 20px var(--overlay-subtle-1);
         }
 
         .info-card p {
             line-height: 1.8;
-            color: #e0e0e0;
+            color: var(--text-primary);
             font-family: 'Minecraft', sans-serif;
             font-weight: 400;
             font-size: 0.82rem;
@@ -451,24 +491,24 @@
         }
 
         .author-card {
-            background: #1a1a1a;
+            background: var(--bg-dark);
             padding: 20px;
             border-radius: 4px;
             text-align: center;
             transition: all 0.15s;
-            border: 3px solid #3a3a3a;
-            box-shadow: 0 6px 0 #1a1a1a, 0 8px 20px rgba(0, 0, 0, 0.2);
+            border: 3px solid var(--border-dark);
+            box-shadow: 0 6px 0 var(--bg-dark), 0 8px 20px var(--overlay-subtle-1);
         }
 
         .author-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 0 #1a1a1a, 0 12px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 0 var(--bg-dark), 0 12px 25px var(--overlay-subtle-3);
         }
 
         .author-name {
             font-size: clamp(0.6rem, 2vw, 1.1rem);
             font-weight: 700;
-            color: #e0e0e0;
+            color: var(--text-primary);
             margin-bottom: 5px;
             font-family: 'Minecraft', 'Minecraft', sans-serif;
             word-break: break-word;
@@ -477,7 +517,7 @@
 
         .author-role {
             font-size: 0.9rem;
-            color: #81c784;
+            color: var(--text-accent-cyan);
             margin-bottom: 15px;
             font-weight: 600;
             text-transform: uppercase;
@@ -491,7 +531,7 @@
         }
 
         .link {
-            color: #8bc34a;
+            color: var(--text-accent-bright);
             text-decoration: none;
             font-size: 0.9rem;
             transition: all 0.15s;
@@ -503,7 +543,7 @@
         }
 
         .link:hover {
-            color: #aed581;
+            color: var(--text-hover-green);
             transform: translateX(3px);
         }
 
@@ -519,7 +559,7 @@
             .author-card {
                 width: 100%;
                 box-sizing: border-box;
-                box-shadow: 0 4px 0 #5a4a3a;
+                box-shadow: 0 4px 0 var(--bg-darker);
                 padding: 16px;
             }
 
@@ -573,18 +613,18 @@
             display: flex;
             align-items: start;
             gap: 15px;
-            background: #1a1a1a;
+            background: var(--bg-dark);
             padding: 20px;
             border-radius: 4px;
-            border: 3px solid #3a3a3a;
-            box-shadow: 0 5px 0 #1a1a1a, 0 7px 15px rgba(0, 0, 0, 0.15);
+            border: 3px solid var(--border-dark);
+            box-shadow: 0 5px 0 var(--bg-dark), 0 7px 15px var(--overlay-subtle-2);
         }
 
         .step-number {
             width: 45px;
             height: 45px;
-            background: linear-gradient(135deg, #6b8e23 0%, #556b2f 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-medium) 100%);
+            color: var(--text-white);
             border-radius: 2px;
             display: flex;
             align-items: center;
@@ -592,8 +632,8 @@
             font-weight: 900;
             font-size: 1.4rem;
             flex-shrink: 0;
-            border: 2px solid #4a5d23;
-            box-shadow: 0 4px 0 #3d4f1c;
+            border: 2px solid var(--blue-medium);
+            box-shadow: 0 4px 0 var(--blue-dark);
             font-family: 'Minecraft', sans-serif;
         }
 
@@ -606,12 +646,12 @@
         .step-content h3 {
             font-size: 1.1rem;
             margin-bottom: 5px;
-            color: #e0e0e0;
+            color: var(--text-primary);
             font-weight: 700;
         }
 
         .step-content p {
-            color: #b0b0b0;
+            color: var(--text-secondary);
             line-height: 1.6;
             font-family: 'Minecraft', sans-serif;
             font-weight: 400;
@@ -619,17 +659,17 @@
         }
 
         .faq-item {
-            background: #1a1a1a;
+            background: var(--bg-dark);
             padding: 15px 20px;
             border-radius: 4px;
             margin-bottom: 10px;
-            border: 3px solid #3a3a3a;
-            box-shadow: 0 4px 0 #1a1a1a, 0 6px 15px rgba(0, 0, 0, 0.15);
+            border: 3px solid var(--border-dark);
+            box-shadow: 0 4px 0 var(--bg-dark), 0 6px 15px var(--overlay-subtle-2);
         }
 
         .faq-question {
             font-weight: 700;
-            color: #8bc34a;
+            color: var(--text-accent-bright);
             margin-bottom: 8px;
             display: flex;
             align-items: center;
@@ -638,7 +678,7 @@
         }
 
         .faq-answer {
-            color: #b0b0b0;
+            color: var(--text-secondary);
             line-height: 1.6;
             font-family: 'Minecraft', sans-serif;
             font-weight: 400;
@@ -650,21 +690,21 @@
             align-items: center;
             gap: 10px;
             padding: 15px;
-            background: #1a1a1a;
-            border-left: 5px solid #81c784;
+            background: var(--bg-dark);
+            border-left: 5px solid var(--text-accent-cyan);
             border-radius: 2px;
             margin-top: 20px;
-            border: 3px solid #3a3a3a;
+            border: 3px solid var(--border-dark);
             box-shadow: none;
         }
 
         .info-note i {
-            color: #81c784;
+            color: var(--text-accent-cyan);
             font-size: 1.3rem;
         }
 
         .info-note span {
-            color: #b0b0b0;
+            color: var(--text-secondary);
             font-weight: 700;
             font-family: 'Minecraft', sans-serif;
         }
@@ -673,7 +713,7 @@
             display: flex;
             gap: 0;
             margin-bottom: 0;
-            border-bottom: 4px solid #3a3a3a;
+            border-bottom: 4px solid var(--border-dark);
             padding-bottom: 0px;
             justify-content: stretch;
             width: 100%;
@@ -686,18 +726,18 @@
         .nav-tab {
             flex: 1;
             padding: 12px 8px;
-            border: 3px solid #3a3a3a;
+            border: 3px solid var(--border-dark);
             border-bottom: none;
             border-right: none;
-            background: #1a1a1a;
-            color: #e0e0e0;
+            background: var(--bg-dark);
+            color: var(--text-primary);
             cursor: pointer;
             border-radius: 0;
             font-weight: 400;
             font-size: 10px;
             transition: all 0.15s;
             position: relative;
-            box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0 -3px 0 var(--overlay-subtle-4);
             text-transform: uppercase;
             letter-spacing: 0.5px;
             font-family: 'MinecraftSeven', 'Minecraft', sans-serif;
@@ -716,12 +756,12 @@
 
         .nav-tab:first-child {
             border-radius: 4px 0 0 0;
-            border-left: 3px solid #3a3a3a;
+            border-left: 3px solid var(--border-dark);
         }
 
         .nav-tab:last-child {
             border-radius: 0 4px 0 0;
-            border-right: 3px solid #3a3a3a;
+            border-right: 3px solid var(--border-dark);
         }
 
         .nav-icon {
@@ -747,15 +787,15 @@
         }
 
         .nav-tab:hover {
-            background: #2a2a2a;
+            background: var(--bg-container);
             transform: translateY(-3px);
         }
 
         .nav-tab.active {
-            background: linear-gradient(180deg, #7cb342 0%, #558b2f 100%);
-            color: white;
-            box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.15), 0 5px 10px rgba(0, 0, 0, 0.2);
-            border-color: #33691e;
+            background: linear-gradient(180deg, var(--blue-bright) 0%, var(--blue-medium) 100%);
+            color: var(--text-white);
+            box-shadow: inset 0 2px 0 var(--white-translucent-1), 0 5px 10px var(--overlay-subtle-1);
+            border-color: var(--blue-darker);
             transform: translateY(-2px);
         }
 
@@ -781,59 +821,59 @@
         }
 
         body .nav-tabs {
-            border-bottom-color: #3a3a3a;
+            border-bottom-color: var(--border-dark);
         }
 
         body .nav-tab {
-            color: #e0e0e0;
-            background: #1a1a1a;
-            border-color: #3a3a3a;
+            color: var(--text-primary);
+            background: var(--bg-dark);
+            border-color: var(--border-dark);
         }
 
         body .nav-tab:hover {
-            color: #e0e0e0;
-            background: #2a2a2a;
+            color: var(--text-primary);
+            background: var(--bg-container);
         }
 
         body .nav-tab.active {
-            color: white;
-            background: linear-gradient(180deg, #7cb342 0%, #558b2f 100%);
-            border-color: #33691e;
+            color: var(--text-white);
+            background: linear-gradient(180deg, var(--blue-bright) 0%, var(--blue-medium) 100%);
+            border-color: var(--blue-darker);
         }
 
         body .info-note {
-            background: #1a1a1a;
-            border-color: #3a3a3a;
+            background: var(--bg-dark);
+            border-color: var(--border-dark);
             box-shadow: none;
         }
 
         body .info-note i {
-            color: #81c784;
+            color: var(--text-accent-cyan);
         }
 
         body .info-note span {
-            color: #b0b0b0;
+            color: var(--text-secondary);
         }
 
         body .container::-webkit-scrollbar-track {
-            background: #1a1a1a;
-            border-color: #3a3a3a;
+            background: var(--bg-dark);
+            border-color: var(--border-dark);
         }
 
         body .container::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #7cb342 0%, #558b2f 100%);
-            border-color: #33691e;
+            background: linear-gradient(180deg, var(--blue-bright) 0%, var(--blue-medium) 100%);
+            border-color: var(--blue-darker);
         }
 
         body footer span {
             font-size: 1.2rem;
             font-weight: 700;
             letter-spacing: 1px;
-            color: #2a2a2a !important;
+            color: var(--bg-container) !important;
             text-shadow: 
-                1px 1px 1px #3a3a3a,
-                -1px -1px 1px #1a1a1a,
-                0 0 1px rgba(0, 0, 0, 0.5) !important;
+                1px 1px 1px var(--border-dark),
+                -1px -1px 1px var(--bg-dark),
+                0 0 1px var(--overlay-subtle-5) !important;
             text-align: center;
             display: block;
             margin: 0 auto;
@@ -864,12 +904,11 @@
             }
         }
     </style>
-    <script src="turnstile/v0/api.js" async defer></script> <!-- kept for potential future use, but no forms now -->
 </head>
 
 <body>
     <div id="page-load-bar"
-        style="position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#4a8c00,#6abf00,#8bc34a,#6abf00);z-index:99999;box-shadow:0 0 8px #6abf00,0 0 2px #fff;transition:width 0.3s ease;border-radius:0 2px 2px 0;">
+        style="position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#003d8f,#0088f0,#0094FF,#0088f0);z-index:99999;box-shadow:0 0 8px #0088f0,0 0 2px #fff;transition:width 0.3s ease;border-radius:0 2px 2px 0;">
     </div>
     <script>
         (function () {
@@ -890,9 +929,8 @@
         })();
     </script>
     <div class="container">
-                <img src="assets/icon/banner.png" alt="Earth Restored"
-            style="max-width: 300px; height: auto; display: block; margin: 0 auto;">
-        <p class="subtitle">An unofficial port of Vienna to .NET - Reviving Minecraft Earth</p>
+        <h1>Solace</h1>
+        <p class="subtitle">Replacement server for Minecraft Earth™, based on Vienna</p>
         <div class="nav-tabs-wrapper">
             <div class="nav-tabs">
                 <button class="nav-tab active" onclick="switchTab('home')"><span
@@ -901,17 +939,6 @@
         </div>
 
         <div id="home-tab" class="tab-content active">
-            <!-- Maintenance Mode Banner (kept) -->
-            <div id="maintenance-banner" style="display:none;">
-                <div class="maintenance-title">
-                    <img src="assets/icon/settings_icon.png"
-                        style="width:16px;height:16px;image-rendering:pixelated;object-fit:contain;vertical-align:middle;margin-right:6px;">
-                    <span>Maintenance in progress</span>
-                </div>
-                <div class="maintenance-desc">
-                    <span>Some sections are temporarily unavailable. We are working on it!</span>
-                </div>
-            </div>
             <div class="discord-banner">
                 <a href="https://discord.gg/3q28YftMAe" target="_blank" class="discord-btn">
                     <i class="fab fa-discord"></i>
@@ -919,15 +946,15 @@
                 </a>
             </div>
             <div class="section">
-                <h2 class="section-title" data-icon="earth_icon.png">
-                    <span>What is ViennaDotNet?</span>
+                <h2 class="section-title" data-icon="about_icon.png">
+                    <span>What is Solace?</span>
                 </h2>
                 <div class="info-card">
-                    <p>Minecraft Earth shut down in 2021 — but we brought it back. ViennaDotNet is an unofficial port of <a href="https://github.com/Project-Genoa/Vienna" target="_blank" style="color: #8bc34a;">Project Vienna</a> to .NET, adding new features like Shop, Map rendering, and an Admin panel.</p>
+                    <p>Minecraft Earth shut down in 2021 — but we brought it back. Solace is an unofficial Server Replacement for Minecraft Earth™, based on <a href="https://github.com/Project-Genoa/Vienna" target="_blank" style="color: #0094FF;">Vienna</a>, adding new features like Shop, Map rendering, and an Admin panel.</p>
                 </div>
             </div>
             <div class="section">
-                <h2 class="section-title" data-icon="friend_icon.png">
+                <h2 class="section-title" data-icon="controller_icon.png">
                     <span>How to Start Playing?</span>
                 </h2>
                 <div class="steps">
@@ -935,7 +962,7 @@
                         <div class="step-number">1</div>
                         <div class="step-content">
                             <h3>Set Up the Server</h3>
-                            <p>Clone the <a href="https://github.com/Earth-Restored/ViennaDotNet" target="_blank" style="color: #8bc34a;">ViennaDotNet repository</a>, install .NET 10.0 SDK and Java 17, then run the publish and launcher scripts.</p>
+                            <p>Clone the <a href="https://github.com/Earth-Restored/Solace" target="_blank" style="color: #0094FF;">Solace repository</a>, install .NET 10.0 SDK and Java 17, then run the publish and launcher scripts.</p>
                         </div>
                     </div>
                     <div class="step">
@@ -949,7 +976,7 @@
                         <div class="step-number">3</div>
                         <div class="step-content">
                             <h3>Patch the Client</h3>
-                            <p>Use <a href="https://github.com/Earth-Restored/Minecraft_Earth_Patcher/releases" target="_blank" style="color: #8bc34a;">MCE Patcher</a> or <a href="https://archive.org/download/dev.projectearth.patcher-1.0/dev.projectearth.patcher-1.0.apk" target="_blank" style="color: #8bc34a;">Project Earth Patcher</a> to patch your Minecraft Earth APK with your server IP.</p>
+                            <p>Use <a href="https://github.com/Earth-Restored/Minecraft_Earth_Patcher/releases" target="_blank" style="color: #0094FF;">MCE Patcher</a> or <a href="https://archive.org/download/dev.projectearth.patcher-1.0/dev.projectearth.patcher-1.0.apk" target="_blank" style="color: #0094FF;">Project Earth Patcher</a> to patch your Minecraft Earth APK with your server IP.</p>
                         </div>
                     </div>
                     <div class="step">
@@ -957,40 +984,6 @@
                         <div class="step-content">
                             <h3>Launch the Game!</h3>
                             <p>Install the patched APK on your device and start exploring Minecraft Earth again!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section">
-                <h2 class="section-title" data-icon="mob_of_me_icon.png">
-                    <span>Contributors</span>
-                </h2>
-                <div class="authors">
-                    <div class="author-card">
-                        <div class="author-name">BitcoderCZ</div>
-                        <div class="author-role">Lead Developer</div>
-                        <div class="author-links">
-                            <a href="https://github.com/BitcoderCZ" class="link" target="_blank">
-                                <i class="fab fa-github"></i> <span>GitHub</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="author-card">
-                        <div class="author-name">LNLenost</div>
-                        <div class="author-role">Developer</div>
-                        <div class="author-links">
-                            <a href="https://github.com/LNLenost" class="link" target="_blank">
-                                <i class="fab fa-github"></i> <span>GitHub</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="author-card">
-                        <div class="author-name">VoltacceptYT</div>
-                        <div class="author-role">Website &amp; Logo Designer</div>
-                        <div class="author-links">
-                            <a href="https://github.com/VoltacceptYT" class="link" target="_blank">
-                                <i class="fab fa-github"></i> <span>GitHub</span>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -1007,10 +1000,10 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <i class="fas fa-question-circle"></i> <span>What is ViennaDotNet?</span>
+                        <i class="fas fa-question-circle"></i> <span>What is Solace?</span>
                     </div>
-                    <div class="faq-answer">ViennaDotNet is an unofficial port of Project Vienna to .NET. It adds new features like Shop, Map rendering, and an Admin panel. More info at
-                        <a href="https://github.com/Earth-Restored/ViennaDotNet" target="_blank" style="color: #8bc34a;">github.com/Earth-Restored/ViennaDotNet</a>.
+                    <div class="faq-answer">Solace is an unofficial port of Project Vienna to .NET. It adds new features like Shop, Map rendering, and an Admin panel. More info at
+                        <a href="https://github.com/Earth-Restored/Solace" target="_blank" style="color: #0094FF;">github.com/Earth-Restored/Solace</a>.
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1032,20 +1025,20 @@
                 </h2>
                 <div class="info-card">
                     <p style="margin-bottom: 15px;">
-                        <strong>ViennaDotNet GitHub:</strong><br>
-                        <a href="https://github.com/Earth-Restored/ViennaDotNet" target="_blank" style="color: #8bc34a;">
-                            <i class="fab fa-github"></i> github.com/Earth-Restored/ViennaDotNet
+                        <strong>Solace GitHub:</strong><br>
+                        <a href="https://github.com/Earth-Restored/Solace" target="_blank" style="color: #0094FF;">
+                            <i class="fab fa-github"></i> github.com/Earth-Restored/Solace
                         </a>
                     </p>
                     <p style="margin-bottom: 15px;">
                         <strong>MCE Patcher:</strong><br>
-                        <a href="https://github.com/Earth-Restored/Minecraft_Earth_Patcher/releases" target="_blank" style="color: #8bc34a;">
+                        <a href="https://github.com/Earth-Restored/Minecraft_Earth_Patcher/releases" target="_blank" style="color: #0094FF;">
                             <i class="fab fa-github"></i> github.com/Earth-Restored/Minecraft_Earth_Patcher
                         </a>
                     </p>
                     <p style="margin-bottom: 15px;">
                         <strong>Original Project Vienna:</strong><br>
-                        <a href="https://github.com/Project-Genoa/Vienna" target="_blank" style="color: #8bc34a;">
+                        <a href="https://github.com/Project-Genoa/Vienna" target="_blank" style="color: #0094FF;">
                             <i class="fab fa-github"></i> github.com/Project-Genoa/Vienna
                         </a>
                     </p>
@@ -1097,14 +1090,14 @@
 
         // Icon helper
         function iconUrl(filename) {
-            return `https://reforged.voltaccept.com/assets/icon/${filename}`;
+            return `/assets/icon/${filename}`;
         }
         function applyMceIcons() {
             document.querySelectorAll('[data-icon]').forEach(el => {
                 const file = el.getAttribute('data-icon');
                 if (!file) return;
                 if (el.querySelector('img.mce-icon')) return;
-                const img = `<img class="mce-icon" src="${iconUrl(file)}" alt="" style="width:28px;height:28px;object-fit:contain;image-rendering:pixelated;vertical-align:middle;margin-right:8px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.3));">`;
+                const img = `<img class="mce-icon" src="${iconUrl(file)}" alt="" style="width:24px;height:24px;object-fit:contain;image-rendering:pixelated;vertical-align:middle;margin-right:8px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.3));">`;
                 el.insertAdjacentHTML('afterbegin', img);
             });
             // nav icons
