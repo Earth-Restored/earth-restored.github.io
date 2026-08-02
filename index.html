@@ -2,123 +2,44 @@
 <html lang="en-US">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <title>Earth Restored</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Solace — Earth Restored</title>
     <link rel="icon" type="image/png" href="assets/icon/favicon.png">
-    <style>
-        /* Minecraft Five */
-        @font-face {
-            font-family: 'Minecraft';
-            src: url('assets/fonts/minecraftfive-regular.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Minecraft';
-            src: url('assets/fonts/minecraftfive-bold.ttf') format('truetype');
-            font-weight: 700;
-            font-style: normal;
-        }
-
-        /* MinecraftSeven */
-        @font-face {
-            font-family: 'MinecraftSeven';
-            src: url('assets/fonts/minecraftseven.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        /* NotoSans */
-        @font-face {
-            font-family: 'NotoSans';
-            src: url('assets/fonts/notosans-regular.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <meta name="description" content="Replacement server for Minecraft Earth™, based on Vienna">
-    <meta name="keywords" content="minecraft, minecraft earth, minecraft earth revival, solace, vienna .net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="description" content="Solace is a fan-made, unofficial server replacement for Minecraft Earth.">
+    <meta name="keywords" content="solace, earth restored, minecraft earth revival, vienna">
     <meta name="author" content="Earth Restored Team">
     <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src *; script-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline'; img-src * data: blob:; font-src * data:; connect-src *; frame-src *;">
-    <meta property="og:title" content="Earth Restored">
-    <meta property="og:description" content="Replacement server for Minecraft Earth™, based on Vienna">
+    <meta property="og:title" content="Solace — Earth Restored">
+    <meta property="og:description" content="A fan-made, unofficial server replacement for Minecraft Earth.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://earth-restored.github.io/">
-    <meta property="og:image" content="assets/icon/banner.png">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Earth Restored">
-    <meta name="twitter:description" content="Replacement server for Minecraft Earth™, based on Vienna">
-    <!-- Google tag (gtag.js) - REMOVED -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#004CB7">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="MCEarth">
-    <link rel="apple-touch-icon">
-    <link rel="apple-touch-icon" sizes="152x152">
-    <link rel="apple-touch-icon" sizes="180x180">
-    <link rel="apple-touch-icon" sizes="167x167">
-    <meta name="msapplication-TileColor" content="#004CB7">
-    <meta name="msapplication-TileImage" content="icon-192.png">
-    <meta name="msapplication-config" content="none">
+    <meta property="og:image" content="assets/branding/open_graph.png">
+    <meta name="theme-color" content="#1b3a4b">
     <style>
         :root {
-            /* Background Colors */
-            --bg-container: #2a2a2a;
-            --bg-dark: #1a1a1a;
-            --bg-darker: #5a4a3a;
-            
-            /* Text Colors */
-            --text-primary: #e0e0e0;
-            --text-secondary: #b0b0b0;
-            --text-accent-bright: #0094FF;
-            --text-accent-cyan: #13A7FF;
-            --text-white: white;
-            --text-hover-green: #66b3ff;
-            
-            /* Blue Accent Colors */
-            --blue-bright: #0195FF;
-            --blue-medium: #006CD7;
-            --blue-dark: #004CB7;
-            --blue-darker: #003AA5;
-            
-            /* Discord Purple */
-            --discord-purple: #5865F2;
-            --discord-purple-dark: #4752c4;
-            --discord-purple-darker: #2e3799;
-            --discord-purple-darkest: #3d47a0;
-            
-            /* Border Colors */
-            --border-dark: #3a3a3a;
-            
-            /* Accent Colors */
-            --accent-green-dark: #003d8f;
-            --accent-green-bright: #0088f0;
-            
-            /* Semi-transparent Colors */
-            --overlay-light: rgba(0, 0, 0, 0.45);
-            --overlay-medium: rgba(0, 0, 0, 0.65);
-            --overlay-dark: rgba(0, 0, 0, 0.7);
-            --overlay-subtle-1: rgba(0, 0, 0, 0.2);
-            --overlay-subtle-2: rgba(0, 0, 0, 0.15);
-            --overlay-subtle-3: rgba(0, 0, 0, 0.3);
-            --overlay-subtle-4: rgba(0, 0, 0, 0.1);
-            --overlay-subtle-5: rgba(0, 0, 0, 0.4);
-            --white-translucent-1: rgba(255, 255, 255, 0.15);
-            --white-translucent-2: rgba(255, 255, 255, 0.4);
-            --discord-glow: rgba(88, 101, 242, 0.35);
-            --blue-glow: #0094FF99;
-            --blue-glow-faint: #0094FF4d;
+            --grass: #6cbb3c;
+            --grass-dark: #4f8f2c;
+            --dirt: #7a5230;
+            --dirt-dark: #5c3d24;
+            --panel: #2b2b2b;
+            --panel-dark: #1a1a1a;
+            --panel-light: #3f3f3f;
+            --border-light: #5c5c5c;
+            --border-dark: #101010;
+            --slot: #232323;
+            --text-primary: #eaeaea;
+            --text-secondary: #aeaeae;
+            --text-muted: #8a8a8a;
+            --accent-cyan: #55d0dc;
+            --accent-cyan-dark: #2f9aa5;
+            --accent-gold: #f2c744;
+            --discord: #5865f2;
+            --discord-dark: #454fbf;
+            --discord-darker: #333c99;
+            --sky-bottom: #1b3a4b;
         }
 
         * {
@@ -127,292 +48,134 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        html::-webkit-scrollbar {
+            display: none;
+        }
+
         body {
-            font-family: 'Minecraft', 'NotoSans', monospace;
+            font-family: 'Press Start 2P', monospace;
+            color: var(--text-primary);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            background: var(--sky-bottom);
+            padding: 32px 16px 120px;
+            image-rendering: pixelated;
             position: relative;
-            background: url('assets/backgrounds/background.png') center center / cover no-repeat fixed;
-            font-feature-settings: "kern" 0, "liga" 0, "calt" 0;
-            text-rendering: -webkit-optimize-contrast;
-            text-rendering: optimize-contrast;
-            -webkit-font-smoothing: none;
-            -moz-osx-font-smoothing: unset;
-            font-smooth: never;
-            letter-spacing: 0.005em;
-            -webkit-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
-            touch-action: manipulation;
-            overscroll-behavior: contain;
+            overflow-x: hidden;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
         }
 
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-                font-size: 14px;
-                text-rendering: optimizeLegibility;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-                font-smooth: auto;
-                letter-spacing: 0.01em;
-            }
-
-            .container,
-            .tab-content,
-            .section,
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6,
-            .nav-tab,
-            .theme-btn,
-            .info-note span {
-                text-rendering: optimizeLegibility;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-                font-smooth: auto;
-                letter-spacing: 0.01em;
-            }
+        body::-webkit-scrollbar {
+            display: none;
         }
 
-        @media (max-width: 480px) {
-            body {
-                padding: 5px;
-                font-size: 12px;
-            }
-        }
-
-        @media (min-width: 769px) {
-            body {
-                text-rendering: -webkit-optimize-contrast;
-                text-rendering: optimize-contrast;
-                -webkit-font-smoothing: none;
-                -moz-osx-font-smoothing: unset;
-                font-smooth: never;
-                letter-spacing: 0.005em;
-            }
-
-            .container,
-            .tab-content,
-            .section,
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6,
-            .nav-tab,
-            .theme-btn,
-            .info-note span {
-                font-feature-settings: "kern" 0, "liga" 0, "calt" 0;
-                text-rendering: -webkit-optimize-contrast;
-                text-rendering: optimize-contrast;
-                -webkit-font-smoothing: none;
-                -moz-osx-font-smoothing: unset;
-                font-smooth: never;
-                letter-spacing: 0.005em;
-                image-rendering: pixelated;
-                image-rendering: -moz-crisp-edges;
-                image-rendering: crisp-edges;
-            }
-        }
-
-        .container,
-        .tab-content,
-        .section {
-            font-family: 'Minecraft', 'NotoSans', sans-serif !important;
-            font-feature-settings: "kern" 0, "liga" 0, "calt" 0;
-            text-rendering: -webkit-optimize-contrast;
-            text-rendering: optimize-contrast;
-            -webkit-font-smoothing: none;
-            -moz-osx-font-smoothing: unset;
-            font-smooth: never;
-            letter-spacing: 0.005em;
+        .terrain {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 96px;
+            z-index: 0;
+            pointer-events: none;
+            background-image: url('assets/background/ground.png');
+            background-repeat: repeat-x;
+            background-size: 64px 96px;
             image-rendering: pixelated;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: crisp-edges;
+            clip-path: polygon(0 100%, 0 40%, 8% 40%, 8% 65%, 16% 65%, 16% 20%, 24% 20%, 24% 55%, 32% 55%, 32% 30%, 40% 30%, 40% 70%, 48% 70%, 48% 45%, 56% 45%, 56% 15%, 64% 15%, 64% 60%, 72% 60%, 72% 35%, 80% 35%, 80% 65%, 88% 65%, 88% 25%, 96% 25%, 96% 50%, 100% 50%, 100% 100%);
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Minecraft', 'Minecraft', 'NotoSans', sans-serif !important;
-            font-feature-settings: "kern" 0, "liga" 0, "calt" 0;
-            text-rendering: -webkit-optimize-contrast;
-            text-rendering: optimize-contrast;
-            -webkit-font-smoothing: none;
-            -moz-osx-font-smoothing: unset;
-            font-smooth: never;
-            letter-spacing: 0.01em;
-            image-rendering: pixelated;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: crisp-edges;
-        }
-
-        .nav-tab,
-        .theme-btn {
-            font-family: 'MinecraftSeven', 'Minecraft', sans-serif !important;
-            font-feature-settings: "kern" 0, "liga" 0, "calt" 0;
-            text-rendering: -webkit-optimize-contrast;
-            text-rendering: optimize-contrast;
-            -webkit-font-smoothing: none;
-            -moz-osx-font-smoothing: unset;
-            font-smooth: never;
-            letter-spacing: 0.02em;
-            image-rendering: pixelated;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: crisp-edges;
-        }
-
-        body {
-            font-feature-settings: "kern" 0, "liga" 0, "calt" 0;
-            text-rendering: -webkit-optimize-contrast;
-            text-rendering: optimize-contrast;
-            -webkit-font-smoothing: none;
-            -moz-osx-font-smoothing: unset;
-            font-smooth: never;
-            image-rendering: pixelated;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: crisp-edges;
-        }
-
-        @-moz-document url-prefix() {
-
-            .container,
-            .tab-content,
-            .section,
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6,
-            .nav-tab,
-            .theme-btn,
-            .info-note span {
-                text-rendering: optimizeLegibility;
-                -moz-osx-font-smoothing: grayscale;
-            }
-        }
-
-        @media screen and (-webkit-min-device-pixel-ratio:0) {
-
-            .container,
-            .tab-content,
-            .section,
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6,
-            .nav-tab,
-            .theme-btn,
-            .info-note span {
-                text-rendering: -webkit-optimize-contrast;
-                -webkit-font-smoothing: none;
-                -webkit-text-stroke: 0.01em transparent;
-            }
-        }
-
-        body::before {
-            content: '';
+        #page-load-bar {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--overlay-light);
-            pointer-events: none;
-            z-index: 0;
+            width: 0%;
+            height: 6px;
+            background-image: repeating-linear-gradient(90deg, var(--grass) 0 8px, var(--grass-dark) 8px 16px);
+            z-index: 9999;
+            box-shadow: 0 0 0 2px var(--panel-dark);
+            transition: width 0.3s ease;
         }
 
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        body {
-            background: url('assets/backgrounds/background.png') center center / cover no-repeat fixed;
-        }
-
-        body::before {
-            background: var(--overlay-medium);
-        }
-
-        .container {
-            background: var(--bg-container);
-            color: var(--text-primary);
-            border-color: var(--bg-dark);
-            box-shadow: 0 8px 24px var(--overlay-dark), inset 0 0 0 4px var(--border-dark);
-            border-radius: 4px;
-            max-width: 1000px;
-            width: 100%;
-            padding: 40px;
-            padding-bottom: 50px;
+        .wrap {
             position: relative;
             z-index: 1;
-            max-height: 90vh;
-            overflow-y: auto;
-            border: 4px solid var(--bg-dark);
+            max-width: 860px;
+            margin: 0 auto;
         }
 
-        .container::-webkit-scrollbar {
-            width: 14px;
+        .panel {
+            background: var(--panel);
+            border: 4px solid var(--panel-dark);
+            box-shadow:
+                inset 3px 3px 0 var(--panel-light),
+                inset -3px -3px 0 var(--border-dark),
+                0 10px 0 var(--border-dark),
+                0 14px 26px rgba(0, 0, 0, 0.5);
+            padding: 40px 32px 48px;
         }
-
-        .container::-webkit-scrollbar-track {
-            background: var(--bg-dark);
-            border-radius: 0px;
-            border: 2px solid var(--border-dark);
-        }
-
-        .container::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--blue-bright) 0%, var(--blue-medium) 100%);
-            border-radius: 0px;
-            border: 2px solid var(--blue-darker);
-        }
-
-        
-
 
         h1 {
             text-align: center;
-            color: var(--text-accent-bright);
-            margin-bottom: 10px;
-            font-size: 2.5rem;
-            margin-top: 60px;
-            font-family: 'Minecraft', 'Minecraft', sans-serif;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            text-shadow: 3px 3px 0 var(--overlay-subtle-1);
-            filter: drop-shadow(0 4px 12px var(--blue-glow)), drop-shadow(0 0 30px var(--blue-glow-faint));
+            font-size: clamp(1.6rem, 5vw, 2.4rem);
+            letter-spacing: 2px;
+            color: var(--grass);
+            text-shadow: 4px 4px 0 var(--border-dark);
+            margin-bottom: 18px;
+        }
+
+        .banner {
+            display: block;
+            width: 100%;
+            max-width: 520px;
+            height: auto;
+            margin: 0 auto 18px;
         }
 
         .subtitle {
             text-align: center;
+            font-size: 0.7rem;
+            line-height: 1.8;
             color: var(--text-secondary);
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            font-family: 'Minecraft', 'Minecraft', sans-serif;
-            font-weight: 600;
+            margin-bottom: 32px;
             letter-spacing: 0.5px;
+        }
+
+        .subtitle strong {
+            color: var(--accent-cyan);
+        }
+
+        nav.blocks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 36px;
+        }
+
+        nav.blocks a {
+            font-family: inherit;
+            font-size: 0.6rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            background: var(--panel-light);
+            border: 3px solid var(--border-dark);
+            box-shadow: inset 2px 2px 0 #5c5c5c, inset -2px -2px 0 var(--border-dark);
+            padding: 10px 14px;
+            letter-spacing: 1px;
+            transition: transform 0.1s steps(2), background-color 0.1s;
+        }
+
+        nav.blocks a:hover,
+        nav.blocks a:focus-visible {
+            background: var(--accent-cyan-dark);
+            transform: translateY(-3px);
+            outline: none;
         }
 
         .discord-banner {
@@ -420,734 +183,919 @@
             margin-bottom: 40px;
         }
 
-        .discord-btn {
+        .btn {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 15px 30px;
-            background: var(--discord-purple);
-            color: var(--text-white);
-            border: 3px solid var(--discord-purple-dark);
-            border-radius: 2px;
-            font-size: 1.05rem;
-            font-weight: 900;
-            font-family: 'Minecraft', sans-serif;
-            cursor: pointer;
-            transition: all 0.15s;
+            gap: 12px;
+            font-family: inherit;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            color: #fff;
             text-decoration: none;
-            box-shadow: 0 5px 0 var(--discord-purple-darker), 0 0 18px var(--discord-glow);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 2px 0 var(--overlay-subtle-5);
+            background: var(--discord);
+            border: 3px solid var(--border-dark);
+            box-shadow: inset 2px 2px 0 #7a85f5, inset -2px -2px 0 var(--discord-darker), 0 6px 0 var(--discord-darker);
+            padding: 16px 26px;
+            cursor: pointer;
+            transition: transform 0.1s steps(2);
         }
 
-        .discord-btn:hover {
-            background: var(--discord-purple-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 7px 0 var(--discord-purple-darkest);
+        .btn:hover,
+        .btn:focus-visible {
+            transform: translateY(-3px);
+            outline: none;
         }
 
-        .discord-btn:active {
+        .btn:active {
             transform: translateY(3px);
-            box-shadow: 0 2px 0 #3d47a0;
+            box-shadow: inset 2px 2px 0 #7a85f5, inset -2px -2px 0 var(--discord-darker), 0 1px 0 var(--discord-darker);
         }
 
-        .section {
-            margin-bottom: 30px;
+        .tab-bar {
+            display: flex;
+            gap: 6px;
+            margin: 0 0 -4px 18px;
+            position: relative;
+            z-index: 2;
         }
 
-        .section-title {
-            font-size: 1.5rem;
-            color: var(--text-accent-cyan);
-            font-weight: 800;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 4px solid var(--blue-dark);
-            font-family: 'Minecraft', 'Minecraft', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .tab-btn {
+            font-family: inherit;
+            font-size: 0.62rem;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            background: var(--panel-dark);
+            border: 4px solid var(--border-dark);
+            border-bottom: none;
+            box-shadow: inset 2px 2px 0 #2c2c2c, inset -2px 0 0 #000;
+            padding: 14px 20px 10px;
+            cursor: pointer;
+            transform: translateY(0);
+            transition: transform 0.1s steps(2), background-color 0.1s, color 0.1s;
         }
 
-        .info-card {
-            background: var(--bg-dark);
-            padding: 20px;
-            border-radius: 4px;
-            margin-bottom: 20px;
-            border: 3px solid var(--border-dark);
-            box-shadow: 0 6px 0 var(--bg-dark), 0 8px 20px var(--overlay-subtle-1);
-        }
-
-        .info-card p {
-            line-height: 1.8;
+        .tab-btn:hover:not(.active) {
             color: var(--text-primary);
-            font-family: 'Minecraft', sans-serif;
-            font-weight: 400;
+            background: #333;
+        }
+
+        .tab-btn.active {
+            background: var(--panel);
+            color: var(--accent-cyan);
+            transform: translateY(0);
+            box-shadow: inset 3px 3px 0 var(--panel-light), inset -3px 0 0 var(--border-dark);
+            z-index: 3;
+        }
+
+        .panel {
+            position: relative;
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        pre {
+            background: var(--panel-dark);
+            border: 3px solid var(--border-dark);
+            box-shadow: inset 2px 2px 0 #000, inset -2px -2px 0 #333;
+            padding: 14px 16px;
+            overflow-x: auto;
+            margin: 10px 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        pre::-webkit-scrollbar {
+            display: none;
+        }
+
+        pre code {
+            font-family: 'Consolas', 'Courier New', monospace;
             font-size: 0.82rem;
+            color: var(--grass);
+            line-height: 1.6;
+            background: none;
+            border: none;
+            padding: 0;
         }
 
-        .authors {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+        .card code,
+        .step-content code,
+        .faq-answer code {
+            font-family: 'Consolas', 'Courier New', monospace;
+            background: var(--panel-dark);
+            border: 2px solid var(--border-dark);
+            color: var(--accent-gold);
+            padding: 2px 6px;
+            font-size: 0.85rem;
         }
 
-        .author-card {
-            background: var(--bg-dark);
-            padding: 20px;
-            border-radius: 4px;
-            text-align: center;
-            transition: all 0.15s;
-            border: 3px solid var(--border-dark);
-            box-shadow: 0 6px 0 var(--bg-dark), 0 8px 20px var(--overlay-subtle-1);
-        }
-
-        .author-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 0 var(--bg-dark), 0 12px 25px var(--overlay-subtle-3);
-        }
-
-        .author-name {
-            font-size: clamp(0.6rem, 2vw, 1.1rem);
-            font-weight: 700;
+        .card ul,
+        .step-content ul {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.9;
             color: var(--text-primary);
-            margin-bottom: 5px;
-            font-family: 'Minecraft', 'Minecraft', sans-serif;
-            word-break: break-word;
-            overflow-wrap: break-word;
+            padding-left: 22px;
         }
 
-        .author-role {
-            font-size: 0.9rem;
-            color: var(--text-accent-cyan);
-            margin-bottom: 15px;
-            font-weight: 600;
-            text-transform: uppercase;
+        .card ul li,
+        .step-content ul li {
+            margin-bottom: 6px;
+        }
+
+        .card h4 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.62rem;
+            letter-spacing: 0.5px;
+            color: var(--accent-gold);
+            margin: 18px 0 10px;
+        }
+
+        .card h4:first-child {
+            margin-top: 0;
+        }
+
+        .compat-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-size: 0.85rem;
+            margin: 10px 0;
+        }
+
+        .compat-table th,
+        .compat-table td {
+            border: 2px solid var(--border-dark);
+            padding: 10px 12px;
+            text-align: left;
+            color: var(--text-primary);
+        }
+
+        .compat-table th {
+            background: var(--panel-light);
+            color: var(--accent-cyan);
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.55rem;
             letter-spacing: 0.5px;
         }
 
-        .author-links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
+        .compat-table td {
+            background: var(--panel-dark);
+            color: var(--text-secondary);
         }
 
-        .link {
-            color: var(--text-accent-bright);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.15s;
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            color: var(--accent-cyan);
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 4px solid var(--dirt-dark);
+        }
+
+        .slot {
+            width: 34px;
+            height: 34px;
+            flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            font-weight: 600;
+            background: var(--slot);
+            border: 3px solid var(--border-dark);
+            box-shadow: inset 2px 2px 0 #4a4a4a, inset -2px -2px 0 var(--border-dark);
+            color: var(--accent-gold);
+            font-size: 1rem;
         }
 
-        .link:hover {
-            color: var(--text-hover-green);
-            transform: translateX(3px);
+        [class^="solace-"] {
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            background-color: currentColor;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            image-rendering: pixelated;
+            vertical-align: middle;
         }
 
-        @media (max-width: 768px) {
-            .authors {
-                grid-template-columns: 1fr;
-                gap: 10px;
-                width: 100%;
-                box-sizing: border-box;
-                padding: 0 8px;
-            }
-
-            .author-card {
-                width: 100%;
-                box-sizing: border-box;
-                box-shadow: 0 4px 0 var(--bg-darker);
-                padding: 16px;
-            }
-
-            .author-name {
-                font-size: 1rem;
-                line-height: 1.3;
-            }
-
-            .author-role {
-                font-size: 0.82rem;
-                line-height: 1.4;
-            }
-
-            .link {
-                font-size: 0.82rem;
-                padding: 8px 12px;
-            }
+        .solace-discord {
+            -webkit-mask-image: url('assets/icons/discord.png');
+            mask-image: url('assets/icons/discord.png');
         }
 
-        @media (max-width: 480px) {
-            .authors {
-                padding: 0 4px;
-                gap: 8px;
-            }
+        .solace-github {
+            -webkit-mask-image: url('assets/icons/github.png');
+            mask-image: url('assets/icons/github.png');
+        }
 
-            .author-card {
-                padding: 12px;
-            }
+        .solace-scroll {
+            -webkit-mask-image: url('assets/icons/scroll.png');
+            mask-image: url('assets/icons/scroll.png');
+        }
 
-            .author-name {
-                font-size: 0.9rem;
-            }
+        .solace-gamepad {
+            -webkit-mask-image: url('assets/icons/gamepad.png');
+            mask-image: url('assets/icons/gamepad.png');
+        }
 
-            .author-role {
-                font-size: 0.78rem;
-            }
+        .solace-question {
+            -webkit-mask-image: url('assets/icons/question.png');
+            mask-image: url('assets/icons/question.png');
+        }
 
-            .link {
-                font-size: 0.78rem;
-                padding: 6px 10px;
-            }
+        .solace-link {
+            -webkit-mask-image: url('assets/icons/link.png');
+            mask-image: url('assets/icons/link.png');
+        }
+
+        .solace-info {
+            -webkit-mask-image: url('assets/icons/info.png');
+            mask-image: url('assets/icons/info.png');
+        }
+
+        .solace-desktop {
+            -webkit-mask-image: url('assets/icons/desktop.png');
+            mask-image: url('assets/icons/desktop.png');
+        }
+
+        .solace-network {
+            -webkit-mask-image: url('assets/icons/network.png');
+            mask-image: url('assets/icons/network.png');
+        }
+
+        .solace-bolt {
+            -webkit-mask-image: url('assets/icons/bolt.png');
+            mask-image: url('assets/icons/bolt.png');
+        }
+
+        .solace-server {
+            -webkit-mask-image: url('assets/icons/server.png');
+            mask-image: url('assets/icons/server.png');
+        }
+
+        .solace-mobile {
+            -webkit-mask-image: url('assets/icons/mobile.png');
+            mask-image: url('assets/icons/mobile.png');
+        }
+
+        .solace-cube {
+            -webkit-mask-image: url('assets/icons/cube.png');
+            mask-image: url('assets/icons/cube.png');
+        }
+
+        .card {
+            background: var(--slot);
+            border: 3px solid var(--border-dark);
+            box-shadow: inset 2px 2px 0 #3a3a3a, inset -2px -2px 0 var(--border-dark), 0 6px 0 var(--border-dark);
+            padding: 22px;
+        }
+
+        .card p {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.9;
+            color: var(--text-primary);
+        }
+
+        .card a,
+        .faq-answer a,
+        .link-line a {
+            color: var(--accent-cyan);
         }
 
         .steps {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 14px;
         }
 
         .step {
             display: flex;
-            align-items: start;
-            gap: 15px;
-            background: var(--bg-dark);
-            padding: 20px;
-            border-radius: 4px;
+            align-items: flex-start;
+            gap: 16px;
+            background: var(--slot);
             border: 3px solid var(--border-dark);
-            box-shadow: 0 5px 0 var(--bg-dark), 0 7px 15px var(--overlay-subtle-2);
+            box-shadow: inset 2px 2px 0 #3a3a3a, inset -2px -2px 0 var(--border-dark), 0 6px 0 var(--border-dark);
+            padding: 18px 20px;
         }
 
         .step-number {
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-medium) 100%);
-            color: var(--text-white);
-            border-radius: 2px;
+            width: 38px;
+            height: 38px;
+            flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 900;
-            font-size: 1.4rem;
-            flex-shrink: 0;
-            border: 2px solid var(--blue-medium);
-            box-shadow: 0 4px 0 var(--blue-dark);
-            font-family: 'Minecraft', sans-serif;
-        }
-
-        .step-content {
-            min-width: 0;
-            flex: 1;
-            overflow: hidden;
+            background: var(--grass-dark);
+            border: 3px solid var(--border-dark);
+            box-shadow: inset 2px 2px 0 var(--grass), inset -2px -2px 0 var(--border-dark);
+            font-size: 0.9rem;
+            color: #fff;
         }
 
         .step-content h3 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
+            font-size: 0.72rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
             color: var(--text-primary);
-            font-weight: 700;
         }
 
         .step-content p {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-size: 0.92rem;
+            line-height: 1.8;
             color: var(--text-secondary);
-            line-height: 1.6;
-            font-family: 'Minecraft', sans-serif;
-            font-weight: 400;
-            font-size: 0.82rem;
         }
 
-        .faq-item {
-            background: var(--bg-dark);
-            padding: 15px 20px;
-            border-radius: 4px;
-            margin-bottom: 10px;
+        details.faq-item {
+            background: var(--slot);
             border: 3px solid var(--border-dark);
-            box-shadow: 0 4px 0 var(--bg-dark), 0 6px 15px var(--overlay-subtle-2);
+            box-shadow: inset 2px 2px 0 #3a3a3a, inset -2px -2px 0 var(--border-dark), 0 5px 0 var(--border-dark);
+            padding: 14px 18px;
+            margin-bottom: 10px;
         }
 
-        .faq-question {
-            font-weight: 700;
-            color: var(--text-accent-bright);
-            margin-bottom: 8px;
+        details.faq-item summary {
+            list-style: none;
+            cursor: pointer;
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.05rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.5px;
+            color: var(--accent-gold);
+        }
+
+        details.faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.faq-item summary::after {
+            content: '+';
+            margin-left: auto;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        details.faq-item[open] summary::after {
+            content: '-';
         }
 
         .faq-answer {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-size: 0.92rem;
+            line-height: 1.8;
             color: var(--text-secondary);
-            line-height: 1.6;
-            font-family: 'Minecraft', sans-serif;
-            font-weight: 400;
-            font-size: 0.82rem;
+            margin-top: 12px;
+            padding-left: 26px;
+        }
+
+        .link-line {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-size: 0.95rem;
+            line-height: 2.2;
+            color: var(--text-primary);
+        }
+
+        .link-line strong {
+            display: block;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.62rem;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+            margin-top: 14px;
+        }
+
+        .link-line:first-child strong {
+            margin-top: 0;
+        }
+
+        .link-line a {
+            text-decoration: none;
+        }
+
+        .link-line a:hover {
+            text-decoration: underline;
         }
 
         .info-note {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 15px;
-            background: var(--bg-dark);
-            border-left: 5px solid var(--text-accent-cyan);
-            border-radius: 2px;
-            margin-top: 20px;
+            gap: 14px;
+            background: var(--slot);
             border: 3px solid var(--border-dark);
-            box-shadow: none;
+            border-left: 6px solid var(--accent-cyan);
+            padding: 16px 18px;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
         }
 
         .info-note i {
-            color: var(--text-accent-cyan);
-            font-size: 1.3rem;
+            color: var(--accent-cyan);
+            font-size: 1.2rem;
         }
 
-        .info-note span {
-            color: var(--text-secondary);
-            font-weight: 700;
-            font-family: 'Minecraft', sans-serif;
-        }
-
-        .nav-tabs {
-            display: flex;
-            gap: 0;
-            margin-bottom: 0;
-            border-bottom: 4px solid var(--border-dark);
-            padding-bottom: 0px;
-            justify-content: stretch;
-            width: 100%;
-        }
-
-        .nav-tabs-wrapper {
-            margin-bottom: 30px;
-        }
-
-        .nav-tab {
-            flex: 1;
-            padding: 12px 8px;
-            border: 3px solid var(--border-dark);
-            border-bottom: none;
-            border-right: none;
-            background: var(--bg-dark);
-            color: var(--text-primary);
-            cursor: pointer;
-            border-radius: 0;
-            font-weight: 400;
-            font-size: 10px;
-            transition: all 0.15s;
-            position: relative;
-            box-shadow: inset 0 -3px 0 var(--overlay-subtle-4);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-family: 'MinecraftSeven', 'Minecraft', sans-serif;
-            -webkit-font-smoothing: none;
-            -moz-osx-font-smoothing: unset;
-            text-rendering: optimizeSpeed;
-            text-shadow: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 4px;
+        footer {
             text-align: center;
-            line-height: 1.2;
-        }
-
-        .nav-tab:first-child {
-            border-radius: 4px 0 0 0;
-            border-left: 3px solid var(--border-dark);
-        }
-
-        .nav-tab:last-child {
-            border-radius: 0 4px 0 0;
-            border-right: 3px solid var(--border-dark);
-        }
-
-        .nav-icon {
-            font-size: 1.2rem;
-            line-height: 1;
-        }
-
-        .nav-icon img {
-            width: 32px;
-            height: 32px;
-            object-fit: contain;
-            image-rendering: pixelated;
-            filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
-            transition: transform 0.15s;
-        }
-
-        .nav-tab.active .nav-icon img {
-            filter: drop-shadow(0 2px 6px rgba(255, 255, 255, 0.4)) brightness(1.1);
-        }
-
-        .nav-tab:hover .nav-icon img {
-            transform: scale(1.15) translateY(-2px);
-        }
-
-        .nav-tab:hover {
-            background: var(--bg-container);
-            transform: translateY(-3px);
-        }
-
-        .nav-tab.active {
-            background: linear-gradient(180deg, var(--blue-bright) 0%, var(--blue-medium) 100%);
-            color: var(--text-white);
-            box-shadow: inset 0 2px 0 var(--white-translucent-1), 0 5px 10px var(--overlay-subtle-1);
-            border-color: var(--blue-darker);
-            transform: translateY(-2px);
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.3s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        body .nav-tabs {
-            border-bottom-color: var(--border-dark);
-        }
-
-        body .nav-tab {
-            color: var(--text-primary);
-            background: var(--bg-dark);
-            border-color: var(--border-dark);
-        }
-
-        body .nav-tab:hover {
-            color: var(--text-primary);
-            background: var(--bg-container);
-        }
-
-        body .nav-tab.active {
-            color: var(--text-white);
-            background: linear-gradient(180deg, var(--blue-bright) 0%, var(--blue-medium) 100%);
-            border-color: var(--blue-darker);
-        }
-
-        body .info-note {
-            background: var(--bg-dark);
-            border-color: var(--border-dark);
-            box-shadow: none;
-        }
-
-        body .info-note i {
-            color: var(--text-accent-cyan);
-        }
-
-        body .info-note span {
-            color: var(--text-secondary);
-        }
-
-        body .container::-webkit-scrollbar-track {
-            background: var(--bg-dark);
-            border-color: var(--border-dark);
-        }
-
-        body .container::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--blue-bright) 0%, var(--blue-medium) 100%);
-            border-color: var(--blue-darker);
-        }
-
-        body footer span {
-            font-size: 1.2rem;
-            font-weight: 700;
+            margin-top: 30px;
+            font-size: 0.6rem;
             letter-spacing: 1px;
-            color: var(--bg-container) !important;
-            text-shadow: 
-                1px 1px 1px var(--border-dark),
-                -1px -1px 1px var(--bg-dark),
-                0 0 1px var(--overlay-subtle-5) !important;
-            text-align: center;
-            display: block;
-            margin: 0 auto;
-            width: fit-content;
-            padding: 10px 20px;
+            color: var(--text-muted);
         }
 
-        /* Mobile optimizations */
-        @media (max-width: 768px) {
+        @media (max-width: 640px) {
+            .panel {
+                padding: 28px 18px 36px;
+            }
+
             h1 {
-                font-size: 2rem;
-                margin-top: 0;
+                letter-spacing: 1px;
             }
 
-
-            .container {
-                padding: 30px 20px;
-                overflow-x: hidden;
+            nav.blocks a {
+                flex: 1 1 40%;
+                text-align: center;
             }
 
-            .nav-tab {
-                font-size: 0.68rem;
-                padding: 10px 4px;
+            .tab-bar {
+                margin-left: 8px;
             }
 
-            .nav-icon {
-                font-size: 1.2rem;
+            .tab-btn {
+                padding: 12px 14px 8px;
+                font-size: 0.56rem;
+            }
+
+            .compat-table {
+                font-size: 0.72rem;
+            }
+
+            .compat-table th,
+            .compat-table td {
+                padding: 8px 6px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            * {
+                transition: none !important;
             }
         }
     </style>
 </head>
 
 <body>
-    <div id="page-load-bar"
-        style="position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#003d8f,#0088f0,#0094FF,#0088f0);z-index:99999;box-shadow:0 0 8px #0088f0,0 0 2px #fff;transition:width 0.3s ease;border-radius:0 2px 2px 0;">
-    </div>
-    <script>
-        (function () {
-            const bar = document.getElementById('page-load-bar');
-            let w = 0;
-            const iv = setInterval(() => {
-                w += Math.random() * 15;
-                if (w > 85) w = 85;
-                bar.style.width = w + '%';
-            }, 200);
-            window.addEventListener('load', () => {
-                clearInterval(iv);
-                bar.style.width = '100%';
-                bar.style.transition = 'width 0.2s ease, opacity 0.5s ease 0.3s';
-                setTimeout(() => { bar.style.opacity = '0'; }, 300);
-                setTimeout(() => { bar.style.display = 'none'; }, 900);
-            });
-        })();
-    </script>
-    <div class="container">
-        <h1>Solace</h1>
-        <p class="subtitle">Replacement server for Minecraft Earth™, based on Vienna</p>
-        <div class="nav-tabs-wrapper">
-            <div class="nav-tabs">
-                <button class="nav-tab active" onclick="switchTab('home')"><span
-                        class="nav-icon"></span><span>Home</span></button>
-            </div>
+    <div id="page-load-bar"></div>
+    <div class="wrap">
+        <div class="tab-bar">
+            <button type="button" class="tab-btn active" data-tab="home">Home Page</button>
+            <button type="button" class="tab-btn" data-tab="install">Install Guide</button>
         </div>
+        <div class="panel">
+            <div id="tab-home" class="tab-panel active">
+            <img src="assets/branding/banner.png" alt="Solace" class="banner">
 
-        <div id="home-tab" class="tab-content active">
+            <p class="subtitle">A fan-made, unofficial <strong>server replacement</strong> for Minecraft Earth</p>
+
+            <nav class="blocks">
+                <a href="#about">About</a>
+                <a href="#play">Get Started</a>
+                <a href="#faq">FAQ</a>
+                <a href="#links">Links</a>
+            </nav>
+
             <div class="discord-banner">
-                <a href="https://discord.gg/3q28YftMAe" target="_blank" class="discord-btn">
-                    <i class="fab fa-discord"></i>
-                    <span>Join our Discord!</span>
+                <a href="https://discord.gg/3q28YftMAe" target="_blank" rel="noopener" class="btn">
+                    <i class="solace-discord"></i>
+                    <span>Join our Discord</span>
                 </a>
             </div>
-            <div class="section">
-                <h2 class="section-title" data-icon="about_icon.png">
+
+            <section id="about">
+                <h2 class="section-title">
+                    <span class="slot"><i class="solace-scroll"></i></span>
                     <span>What is Solace?</span>
                 </h2>
-                <div class="info-card">
-                    <p>Minecraft Earth shut down in 2021 — but we brought it back. Solace is an unofficial Server Replacement for Minecraft Earth™, based on <a href="https://github.com/Project-Genoa/Vienna" target="_blank" style="color: #0094FF;">Vienna</a>, adding new features like Shop, Map rendering, and an Admin panel.</p>
+                <div class="card">
+                    <p>Minecraft Earth shut down in 2021 — but we brought it back. Solace is an unofficial server
+                        replacement for Minecraft Earth, based on
+                        <a href="https://github.com/Project-Genoa/Vienna" target="_blank" rel="noopener">Vienna</a>.
+                        Most core gameplay already works, including the map, journal, activity log, inventory,
+                        crafting, smelting, boosts, tappables, buildplates, and the store, with features like
+                        challenges, seasons, and adventures still under active development. The project is still a
+                        work in progress, so expect bugs and breaking changes.
+                    </p>
                 </div>
-            </div>
-            <div class="section">
-                <h2 class="section-title" data-icon="controller_icon.png">
-                    <span>How to Start Playing?</span>
+            </section>
+
+            <section id="play">
+                <h2 class="section-title">
+                    <span class="slot"><i class="solace-gamepad"></i></span>
+                    <span>How to Start Playing</span>
                 </h2>
                 <div class="steps">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div class="step-content">
                             <h3>Set Up the Server</h3>
-                            <p>Clone the <a href="https://github.com/Earth-Restored/Solace" target="_blank" style="color: #0094FF;">Solace repository</a>, install .NET 10.0 SDK and Java 17, then run the publish and launcher scripts.</p>
+                            <p>Install the .NET 10.0 SDK and Java 17, then clone the
+                                <a href="https://github.com/Earth-Restored/Solace" target="_blank"
+                                    rel="noopener">Solace repository</a> and run
+                                <code>publish.ps1 -profiles framework-dependent-{os}-{arch}</code> followed by
+                                <code>run_launcher.ps1</code>. On Linux, macOS, or Termux you can instead run the
+                                one-line install script from the repository.</p>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <h3>Configure &amp; Start Server</h3>
-                            <p>Open localhost:5000, create an account, set your PC&apos;s IP address in Server Options, and click Start.</p>
+                            <h3>Configure &amp; Start the Server</h3>
+                            <p>Open localhost:5000, create an account and confirm the email, then set your PC's IP
+                                address under Server Options along with a MapTiler API key (or disable map tile
+                                rendering), and click Start under Server Status.</p>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
                         <div class="step-content">
                             <h3>Patch the Client</h3>
-                            <p>Use <a href="https://github.com/Earth-Restored/Minecraft_Earth_Patcher/releases" target="_blank" style="color: #0094FF;">MCE Patcher</a> or <a href="https://archive.org/download/dev.projectearth.patcher-1.0/dev.projectearth.patcher-1.0.apk" target="_blank" style="color: #0094FF;">Project Earth Patcher</a> to patch your Minecraft Earth APK with your server IP.</p>
+                            <p>Use <a href="https://github.com/Earth-Restored/Minecraft_Earth_Patcher/releases"
+                                    target="_blank" rel="noopener">MCE Patcher</a> or Project Earth Patcher to patch
+                                your Minecraft Earth APK with your server IP.</p>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">4</div>
                         <div class="step-content">
-                            <h3>Launch the Game!</h3>
-                            <p>Install the patched APK on your device and start exploring Minecraft Earth again!</p>
+                            <h3>Launch the Game</h3>
+                            <p>Install the patched APK on your device and start exploring Minecraft Earth again.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="section">
-                <h2 class="section-title" data-icon="journal_open_icon.png">
+            </section>
+
+            <section id="faq">
+                <h2 class="section-title">
+                    <span class="slot"><i class="solace-question"></i></span>
                     <span>FAQ</span>
                 </h2>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i> <span>What are the requirements?</span>
+                <details class="faq-item">
+                    <summary>What are the requirements?</summary>
+                    <div class="faq-answer">You need a PC running Windows or Linux, the .NET 10.0 SDK, and Java 17
+                        (JRE or JDK). macOS is untested, and high-end Android devices can run the server via
+                        Termux.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>What is Solace?</summary>
+                    <div class="faq-answer">Solace is a replacement server for Minecraft Earth based on Project
+                        Vienna. It is not affiliated with, authorized, or endorsed by Microsoft or Mojang Studios.
+                        More info at
+                        <a href="https://github.com/Earth-Restored/Solace" target="_blank"
+                            rel="noopener">github.com/Earth-Restored/Solace</a>.
                     </div>
-                    <div class="faq-answer">You need a PC running Windows or Linux, .NET 10.0 SDK, and Java 17 (JRE or JDK). macOS is untested.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i> <span>What is Solace?</span>
-                    </div>
-                    <div class="faq-answer">Solace is an unofficial port of Project Vienna to .NET. It adds new features like Shop, Map rendering, and an Admin panel. More info at
-                        <a href="https://github.com/Earth-Restored/Solace" target="_blank" style="color: #0094FF;">github.com/Earth-Restored/Solace</a>.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i> <span>App says &quot;Cannot connect to the network&quot;?</span>
-                    </div>
-                    <div class="faq-answer">Make sure the server is running, check your PC&apos;s IP address is correct, verify your firewall isn&apos;t blocking it, and ensure your phone and PC are on the same network.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i> <span>Where to download the APK?</span>
-                    </div>
-                    <div class="faq-answer">You need a legal copy of Minecraft Earth. We do not provide pre-patched APKs - use the MCE Patcher or Project Earth Patcher to patch your own APK.</div>
-                </div>
-            </div>
-            <div class="section">
-                <h2 class="section-title" data-icon="adventure_icon.png">
+                </details>
+                <details class="faq-item">
+                    <summary>App says "Cannot connect to the network"?</summary>
+                    <div class="faq-answer">Make sure the server is running, check that your PC's IP address is
+                        correct, verify your firewall isn't blocking it, and ensure your phone and PC are on the same
+                        network.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Where do I download the APK?</summary>
+                    <div class="faq-answer">You need a legal copy of Minecraft Earth. We do not provide pre-patched
+                        APKs — use the MCE Patcher or Project Earth Patcher to patch your own APK.</div>
+                </details>
+            </section>
+
+            <section id="links">
+                <h2 class="section-title">
+                    <span class="slot"><i class="solace-link"></i></span>
                     <span>Useful Links</span>
                 </h2>
-                <div class="info-card">
-                    <p style="margin-bottom: 15px;">
-                        <strong>Solace GitHub:</strong><br>
-                        <a href="https://github.com/Earth-Restored/Solace" target="_blank" style="color: #0094FF;">
-                            <i class="fab fa-github"></i> github.com/Earth-Restored/Solace
-                        </a>
-                    </p>
-                    <p style="margin-bottom: 15px;">
-                        <strong>MCE Patcher:</strong><br>
-                        <a href="https://github.com/Earth-Restored/Minecraft_Earth_Patcher/releases" target="_blank" style="color: #0094FF;">
-                            <i class="fab fa-github"></i> github.com/Earth-Restored/Minecraft_Earth_Patcher
-                        </a>
-                    </p>
-                    <p style="margin-bottom: 15px;">
-                        <strong>Original Project Vienna:</strong><br>
-                        <a href="https://github.com/Project-Genoa/Vienna" target="_blank" style="color: #0094FF;">
-                            <i class="fab fa-github"></i> github.com/Project-Genoa/Vienna
-                        </a>
-                    </p>
-                    <p style="margin-bottom: 15px;">
-                        <strong>Our Discord:</strong><br>
-                        <a href="https://discord.gg/3q28YftMAe" target="_blank" style="color: #5865F2;">
-                            <i class="fab fa-discord"></i> discord.gg/3q28YftMAe
-                        </a>
-                    </p>
+                <div class="card">
+                    <div class="link-line">
+                        <strong>Solace GitHub</strong>
+                        <a href="https://github.com/Earth-Restored/Solace" target="_blank" rel="noopener">
+                            <i class="solace-github"></i> github.com/Earth-Restored/Solace</a>
+                    </div>
+                    <div class="link-line">
+                        <strong>Installation Guide</strong>
+                        <a href="https://github.com/Earth-Restored/Solace/blob/main/Installation.md" target="_blank"
+                            rel="noopener">
+                            <i class="solace-github"></i> github.com/Earth-Restored/Solace/Installation.md</a>
+                    </div>
+                    <div class="link-line">
+                        <strong>MCE Patcher</strong>
+                        <a href="https://github.com/Earth-Restored/Minecraft_Earth_Patcher/releases" target="_blank"
+                            rel="noopener">
+                            <i class="solace-github"></i> github.com/Earth-Restored/Minecraft_Earth_Patcher</a>
+                    </div>
+                    <div class="link-line">
+                        <strong>Original Project Vienna</strong>
+                        <a href="https://github.com/Project-Genoa/Vienna" target="_blank" rel="noopener">
+                            <i class="solace-github"></i> github.com/Project-Genoa/Vienna</a>
+                    </div>
+                    <div class="link-line">
+                        <strong>Our Discord</strong>
+                        <a href="https://discord.gg/3q28YftMAe" target="_blank" rel="noopener">
+                            <i class="solace-discord"></i> discord.gg/3q28YftMAe</a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="info-note">
+                <i class="solace-info"></i>
+                <span>This project is created by fans and is not affiliated with Mojang or Microsoft.</span>
+            </div>
+            </div>
+
+            <div id="tab-install" class="tab-panel">
+                <img src="assets/branding/banner.png" alt="Solace" class="banner">
+                <h1>INSTALL GUIDE</h1>
+                <p class="subtitle">Full setup walkthrough for the <strong>server</strong> and <strong>client</strong></p>
+
+                <section id="requirements">
+                    <h2 class="section-title">
+                        <span class="slot"><i class="solace-desktop"></i></span>
+                        <span>System Requirements</span>
+                    </h2>
+                    <div class="card">
+                        <h4>Hardware &amp; OS</h4>
+                        <ul>
+                            <li><strong>PC:</strong> Windows or Linux — macOS is currently untested.</li>
+                            <li><strong>Mobile:</strong> High-end Android devices can run the server through Termux.</li>
+                        </ul>
+                        <h4>Software Dependencies</h4>
+                        <p style="font-family:'Segoe UI', system-ui, sans-serif; font-size:0.85rem; color:var(--text-muted); margin-bottom:10px;">These are installed automatically if you use the semi-automatic install method below.</p>
+                        <ul>
+                            <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0" target="_blank" rel="noopener">.NET 10.0 SDK</a></li>
+                            <li>Java 17 (JRE or JDK) — newer versions may not work</li>
+                            <li>On Linux, <a href="https://learn.microsoft.com/en-us/powershell/scripting/install/linux-overview" target="_blank" rel="noopener">PowerShell</a> is needed to run the build script</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="find-ip">
+                    <h2 class="section-title">
+                        <span class="slot"><i class="solace-network"></i></span>
+                        <span>Find Your PC's IP Address</span>
+                    </h2>
+                    <div class="card">
+                        <p style="margin-bottom:14px;">You'll need this before you start, since both the server config and the client patcher point at it.</p>
+                        <h4>Windows</h4>
+                        <ul>
+                            <li>Open a terminal, type <code>ipconfig</code> and press enter</li>
+                            <li>Look under "Wireless LAN adapter Wi-Fi" (WiFi) or "Ethernet adapter Ethernet" (wired)</li>
+                            <li>Note the value next to "IPv4 Address"</li>
+                        </ul>
+                        <h4>Linux</h4>
+                        <ul>
+                            <li>Run <code>ip address</code>, <code>hostname -I</code>, or <code>ifconfig -a</code></li>
+                        </ul>
+                        <p style="margin-top:10px;">It's usually, though not always, formatted like <code>192.168.XXX.XXX</code>.</p>
+                    </div>
+                </section>
+
+                <section id="semi-auto">
+                    <h2 class="section-title">
+                        <span class="slot"><i class="solace-bolt"></i></span>
+                        <span>Semi-Automatic Install (Linux, macOS, Termux)</span>
+                    </h2>
+                    <div class="card">
+                        <p style="margin-bottom:10px;">Open a terminal and run the matching one-liner, then wait for it to finish.</p>
+                        <h4>Linux / macOS</h4>
+                        <pre><code>sudo curl -sSl https://raw.githubusercontent.com/Earth-Restored/Solace/main/install.sh | bash</code></pre>
+                        <h4>Termux</h4>
+                        <pre><code>curl -sSl https://raw.githubusercontent.com/Earth-Restored/Solace/main/install.sh | bash</code></pre>
+                        <p style="margin-top:10px;">Once it completes, pick up the Manual instructions below starting at server step 4.</p>
+                    </div>
+                </section>
+
+                <section id="manual-server">
+                    <h2 class="section-title">
+                        <span class="slot"><i class="solace-server"></i></span>
+                        <span>Manual Install — Server</span>
+                    </h2>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Clone the Repository</h3>
+                                <p><code>git clone https://github.com/Earth-Restored/Solace.git</code></p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Publish the Build</h3>
+                                <p><code>cd</code> into the Solace directory and run <code>publish.ps1 -profiles framework-dependent-{os}-{arch}</code>, swapping <code>{os}</code> for win, linux, or osx, and <code>{arch}</code> for x64, x86, arm64, or arm32 (e.g. <code>framework-dependent-win-x64</code>).</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Run the Launcher</h3>
+                                <p>Run <code>run_launcher.ps1</code>.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Create an Account</h3>
+                                <p>On the same device, open <a href="http://localhost:5000" target="_blank" rel="noopener">localhost:5000</a>, register an account, and confirm your email from the page that opens before logging in. If you miss the confirmation step, you'll need to delete the account database and start over — see the project's README.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Set Server Options</h3>
+                                <p>Under "Server Options," set Network/IPv4 Address to your PC's IP, then either disable Map/Enable Tile Rendering or add a Map/MapTiler API key (get one from your MapTiler account once logged in).</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h3>Start the Server</h3>
+                                <p>Under "Server Status," click Start.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <h3>Accept the EULA</h3>
+                                <p>Accept the Minecraft server's EULA when it's prompted in the launcher's logs.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">8</div>
+                            <div class="step-content">
+                                <h3>Grab the Resource Pack</h3>
+                                <p>Download and move the "resourcepack" file as described in the launcher's logs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="manual-client">
+                    <h2 class="section-title">
+                        <span class="slot"><i class="solace-mobile"></i></span>
+                        <span>Manual Install — Client</span>
+                    </h2>
+                    <div class="card">
+                        <p style="margin-bottom:14px;">iOS players can try an unofficial patcher, though only the AltStore install method is expected to work reliably. On Android, choose between the two patchers below.</p>
+                        <table class="compat-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Project Earth Patcher</th>
+                                    <th>MCE Patcher</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Target device</td>
+                                    <td>Android</td>
+                                    <td>Android</td>
+                                </tr>
+                                <tr>
+                                    <td>Patcher runs on</td>
+                                    <td>Android</td>
+                                    <td>Windows, Linux, macOS</td>
+                                </tr>
+                                <tr>
+                                    <td>Login</td>
+                                    <td>Microsoft account only</td>
+                                    <td>Microsoft or custom</td>
+                                </tr>
+                                <tr>
+                                    <td>Shop</td>
+                                    <td>Needs a Microsoft account that played before shutdown</td>
+                                    <td>Always works with custom login</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="steps" style="margin-top:14px;">
+                        <div class="step">
+                            <div class="step-number">A</div>
+                            <div class="step-content">
+                                <h3>Project Earth Patcher</h3>
+                                <p>Download and install <a href="https://archive.org/download/dev.projectearth.patcher-1.0/dev.projectearth.patcher-1.0.apk" target="_blank" rel="noopener">the patcher</a> on a device with a legal copy of Minecraft Earth already installed. Open it, go to the 3-dot menu → Settings, and under Locator Server enter <code>http://{ip}:8080</code> (use your PC's IP or hostname, and keep it as <code>http://</code> not <code>https://</code>). Go back and start patching, then open the newly patched app to play.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">B</div>
+                            <div class="step-content">
+                                <h3>MCE Patcher</h3>
+                                <p>Download <a href="https://github.com/Earth-Restored/Minecraft_Earth_Patcher/releases" target="_blank" rel="noopener">MCE Patcher</a> (the UI build is recommended) or build it from source. Acquire a Minecraft Earth APK, e.g. by dumping it from your phone, then run the patcher and select the APK. Change the locator hostname/IP to <code>{ip}:8080</code> using your PC's IP or hostname — for non-Microsoft login, adjust the login options accordingly (this is the default in Simple UI mode). Click Patch, move the patched APK to your phone, install it, and you're ready to play.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="buildplate-preview">
+                    <h2 class="section-title">
+                        <span class="slot"><i class="solace-cube"></i></span>
+                        <span>Launcher Buildplate Preview (Optional)</span>
+                    </h2>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Get the Java Resource Pack</h3>
+                                <p>You'll need the Minecraft 1.20.4 resource pack. The easiest way is to pull it straight from the game's JAR: open <code>1.20.4.jar</code> from your Minecraft install folder in an archive tool like 7-Zip, then navigate to <code>assets/minecraft/</code>.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Copy the Assets</h3>
+                                <p>Copy every folder from <code>assets/minecraft/</code> and paste them into <code>staticdata/resourcepacks/java/minecraft/</code>.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Enable the Toggle</h3>
+                                <p>Turn on "Enable Buildplate Preview in Launcher" under Server Options → Data Handling.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="info-note">
+                    <i class="solace-info"></i>
+                    <span>Full, always up-to-date instructions live in the <a href="https://github.com/Earth-Restored/Solace/blob/main/Installation.md" target="_blank" rel="noopener">Installation.md</a> on GitHub.</span>
                 </div>
             </div>
-        </div> <!-- end home-tab -->
-
-        <div class="info-note" style="margin-bottom:0;">
-            <i class="fas fa-info-circle"></i>
-            <span>This project is created by fans and is not affiliated with Mojang or Microsoft</span>
         </div>
 
         <footer>
-            <div>
-                <span>
-                    © 2026 Earth Restored
-                </span>
-            </div>
+            <span>© 2026 Earth Restored</span>
         </footer>
     </div>
 
     <script>
-        // Minimal required functions: theme, maintenance, tab switch, icons.
-        let currentLang = 'en';
-        function switchTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.nav-tab').forEach(btn => btn.classList.remove('active'));
-            const tabEl = document.getElementById(tabName + '-tab');
-            if (tabEl) tabEl.classList.add('active');
-            document.querySelectorAll('.nav-tab').forEach(btn => {
-                if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes("'" + tabName + "'")) {
-                    btn.classList.add('active');
-                }
-            });
-            if (tabName === 'home') {
-                // any home-specific actions
+        (function () {
+            var tabBtns = document.querySelectorAll('.tab-btn');
+            var tabPanels = document.querySelectorAll('.tab-panel');
+
+            function activateTab(name) {
+                tabBtns.forEach(function (btn) {
+                    btn.classList.toggle('active', btn.dataset.tab === name);
+                });
+                tabPanels.forEach(function (panel) {
+                    panel.classList.toggle('active', panel.id === 'tab-' + name);
+                });
+                window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
             }
-        }
 
-        
-        // Maintenance mode (simplified, no Supabase)
-        // We'll keep the banner but it's hidden by default.
-
-        // Icon helper
-        function iconUrl(filename) {
-            return `/assets/icon/${filename}`;
-        }
-        function applyMceIcons() {
-            document.querySelectorAll('[data-icon]').forEach(el => {
-                const file = el.getAttribute('data-icon');
-                if (!file) return;
-                if (el.querySelector('img.mce-icon')) return;
-                const img = `<img class="mce-icon" src="${iconUrl(file)}" alt="" style="width:24px;height:24px;object-fit:contain;image-rendering:pixelated;vertical-align:middle;margin-right:8px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.3));">`;
-                el.insertAdjacentHTML('afterbegin', img);
+            tabBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    activateTab(btn.dataset.tab);
+                });
             });
-            // nav icons
-            const homeTab = document.querySelector('.nav-tab[onclick*="home"] .nav-icon');
-            if (homeTab) homeTab.innerHTML = `<img src="${iconUrl('shop_icon.png')}" alt="home">`;
-        }
-
-        // Initialize icons
-        document.addEventListener('DOMContentLoaded', () => {
-            applyMceIcons();
-
-            // Cookie banner if no consent
-            if (!getCookieConsent()) showCookieBanner();
-        });
+        })();
     </script>
-    <!-- Compass sprite animation (kept for potential use, but no longer used) -->
+
     <script>
         (function () {
-            const COMPASS_URL = 'assets/icon/compass_atlas_icon.png';
-            const FRAME_COUNT = 32;
-            const COLS = 10;
-            const SIZE = 48;
-            const FPS = 16;
-            function animateCompass(el) {
-                let frame = 0;
-                const id = setInterval(() => {
-                    if (!document.contains(el)) { clearInterval(id); return; }
-                    const col = frame % COLS;
-                    const row = Math.floor(frame / COLS);
-                    el.style.backgroundPosition = (-col * SIZE) + 'px ' + (-row * SIZE) + 'px';
-                    frame = (frame + 1) % FRAME_COUNT;
-                }, Math.round(1000 / FPS));
-                el._compassIntervalId = id;
-            }
-            const observer = new MutationObserver(mutations => {
-                mutations.forEach(m => {
-                    m.addedNodes.forEach(node => {
-                        if (!node.querySelectorAll) return;
-                        node.querySelectorAll('.compass-loader').forEach(el => {
-                            if (!el._compassIntervalId) animateCompass(el);
-                        });
-                    });
-                });
-            });
-            observer.observe(document.body, { childList: true, subtree: true });
-            document.addEventListener('DOMContentLoaded', () => {
-                document.querySelectorAll('.compass-loader').forEach(el => {
-                    if (!el._compassIntervalId) animateCompass(el);
-                });
+            var bar = document.getElementById('page-load-bar');
+            var w = 0;
+            var iv = setInterval(function () {
+                w += Math.random() * 15;
+                if (w > 85) w = 85;
+                bar.style.width = w + '%';
+            }, 200);
+            window.addEventListener('load', function () {
+                clearInterval(iv);
+                bar.style.width = '100%';
+                bar.style.transition = 'width 0.2s ease, opacity 0.5s ease 0.3s';
+                setTimeout(function () { bar.style.opacity = '0'; }, 300);
+                setTimeout(function () { bar.style.display = 'none'; }, 900);
             });
         })();
     </script>
