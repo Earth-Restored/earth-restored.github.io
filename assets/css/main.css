@@ -108,7 +108,7 @@ h1 {
 
 .subtitle {
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     line-height: 1.8;
     color: var(--text-secondary);
     margin-bottom: 32px;
@@ -129,7 +129,7 @@ nav.blocks {
 
 nav.blocks a {
     font-family: inherit;
-    font-size: 0.6rem;
+    font-size: 0.72rem;
     color: var(--text-primary);
     text-decoration: none;
     background: var(--panel);
@@ -158,7 +158,7 @@ nav.blocks a:focus-visible {
     align-items: center;
     gap: 12px;
     font-family: inherit;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     letter-spacing: 1px;
     color: #fff;
     text-decoration: none;
@@ -200,7 +200,7 @@ nav.blocks a:focus-visible {
 
 .tab-btn {
     font-family: inherit;
-    font-size: 0.62rem;
+    font-size: 0.75rem;
     letter-spacing: 1px;
     color: var(--text-muted);
     background: var(--panel-dark);
@@ -258,9 +258,9 @@ pre::-webkit-scrollbar {
 }
 
 pre code {
-    font-family: 'Consolas', 'Courier New', monospace;
+    font-family: 'VT323', monospace;
     font-size: 0.82rem;
-    color: var(--solacium-light);
+    color: var(--solacium) !important;
     line-height: 1.6;
     background: none !important;
     border: none !important;
@@ -282,7 +282,7 @@ pre code {
     top: 8px;
     right: 8px;
     font-family: 'Press Start 2P', monospace;
-    font-size: 0.5rem;
+    font-size: 0.62rem;
     letter-spacing: 0.5px;
     color: var(--text-primary);
     background: var(--panel-light);
@@ -295,8 +295,7 @@ pre code {
 
 .copy-btn:hover,
 .copy-btn:focus-visible {
-    background: var(--solacium-dark);
-    color: var(--panel-dark);
+    background: var(--border-light);
     outline: none;
 }
 
@@ -305,17 +304,18 @@ pre code {
 }
 
 .copy-btn.copied {
-    background: var(--solacium-light);
-    color: #fff;
+    background: var(--solacium);
+    border: 2px solid var(--solacium-dark);
+    box-shadow: inset 1px 1px 0 var(--solacium-light), inset -1px -1px 0 var(--solacium-dark);
 }
 
 .card code,
 .step-content code,
 .faq-answer code {
-    font-family: 'Consolas', 'Courier New', monospace;
+    font-family: 'VT323', monospace;
     background: var(--panel-dark);
     border: 2px solid var(--border-dark);
-    color: var(--solacium-dark);
+    color: var(--solacium);
     padding: 2px 6px;
     font-size: 0.85rem;
     overflow-wrap: anywhere;
@@ -323,7 +323,7 @@ pre code {
 
 .card ul,
 .step-content ul {
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.95rem;
     line-height: 1.9;
     color: var(--text-primary);
@@ -337,9 +337,9 @@ pre code {
 
 .card h4 {
     font-family: 'Press Start 2P', monospace;
-    font-size: 0.62rem;
+    font-size: 0.72rem;
     letter-spacing: 0.5px;
-    color: var(--solacium-dark);
+    color: var(--solacium);
     margin: 18px 0 10px;
 }
 
@@ -350,7 +350,7 @@ pre code {
 .compat-table {
     width: 100%;
     border-collapse: collapse;
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.85rem;
     margin: 10px 0;
 }
@@ -367,7 +367,7 @@ pre code {
     background: var(--panel-light);
     color: var(--solacium-light);
     font-family: 'Press Start 2P', monospace;
-    font-size: 0.55rem;
+    font-size: 0.65rem;
     letter-spacing: 0.5px;
 }
 
@@ -491,7 +491,7 @@ pre code {
 }
 
 .card p {
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.95rem;
     line-height: 1.9;
     color: var(--text-primary);
@@ -536,14 +536,14 @@ a {
 }
 
 .step-content h3 {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     letter-spacing: 0.5px;
     margin-bottom: 8px;
     color: var(--text-primary);
 }
 
 .step-content p {
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.92rem;
     line-height: 1.8;
     color: var(--text-secondary);
@@ -563,9 +563,9 @@ details.faq-item summary {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     letter-spacing: 0.5px;
-    color: var(--solacium-dark);
+    color: var(--solacium);
 }
 
 details.faq-item summary::-webkit-details-marker {
@@ -584,7 +584,7 @@ details.faq-item[open] summary::after {
 }
 
 .faq-answer {
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.92rem;
     line-height: 1.8;
     color: var(--text-secondary);
@@ -593,7 +593,7 @@ details.faq-item[open] summary::after {
 }
 
 .link-line {
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.95rem;
     line-height: 2.2;
     color: var(--text-primary);
@@ -602,7 +602,7 @@ details.faq-item[open] summary::after {
 .link-line strong {
     display: block;
     font-family: 'Press Start 2P', monospace;
-    font-size: 0.62rem;
+    font-size: 0.72rem;
     letter-spacing: 0.5px;
     color: var(--text-secondary);
     margin-bottom: 4px;
@@ -630,7 +630,7 @@ details.faq-item[open] summary::after {
     border: 3px solid var(--border-dark);
     border-left: 6px solid var(--solacium-light);
     padding: 16px 18px;
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.88rem;
     color: var(--text-secondary);
 }
@@ -649,7 +649,7 @@ details.faq-item[open] summary::after {
 footer {
     text-align: center;
     margin-top: 30px;
-    font-size: 0.6rem;
+    font-size: 0.72rem;
     letter-spacing: 1px;
     color: var(--text-muted);
 }
@@ -673,7 +673,7 @@ footer {
     }
 
     .subtitle {
-        font-size: 0.62rem;
+        font-size: 0.75rem;
         line-height: 1.7;
         margin-bottom: 24px;
     }
@@ -688,7 +688,7 @@ footer {
     nav.blocks a {
         text-align: center;
         padding: 12px 8px;
-        font-size: 0.56rem;
+        font-size: 0.68rem;
     }
 
     .discord-banner {
@@ -698,7 +698,7 @@ footer {
     .btn {
         width: 100%;
         justify-content: center;
-        font-size: 0.62rem;
+        font-size: 0.72rem;
         padding: 14px 18px;
     }
 
@@ -711,7 +711,7 @@ footer {
         flex: 1;
         text-align: center;
         padding: 12px 6px 8px;
-        font-size: 0.5rem;
+        font-size: 0.62rem;
         letter-spacing: 0.5px;
     }
 
@@ -744,7 +744,7 @@ footer {
     }
 
     .card h4 {
-        font-size: 0.56rem;
+        font-size: 0.66rem;
     }
 
     .steps {
@@ -776,7 +776,7 @@ footer {
 
     .compat-table {
         min-width: 480px;
-        font-size: 0.72rem;
+        font-size: 0.82rem;
     }
 
     .compat-table th,
@@ -789,7 +789,7 @@ footer {
     }
 
     details.faq-item summary {
-        font-size: 0.66rem;
+        font-size: 0.78rem;
     }
 
     .faq-answer {
@@ -804,7 +804,7 @@ footer {
     }
 
     .link-line strong {
-        font-size: 0.56rem;
+        font-size: 0.68rem;
     }
 
     .info-note {
@@ -816,7 +816,7 @@ footer {
     }
 
     pre code {
-        font-size: 0.72rem;
+        font-size: 0.85rem;
     }
 
     .code-block pre {
@@ -824,7 +824,7 @@ footer {
     }
 
     .copy-btn {
-        font-size: 0.4rem;
+        font-size: 0.55rem;
         padding: 5px 7px;
         top: 6px;
         right: 6px;
@@ -855,7 +855,7 @@ footer {
     }
 
     .tab-btn {
-        font-size: 0.44rem;
+        font-size: 0.58rem;
         padding: 10px 4px 7px;
     }
 
