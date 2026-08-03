@@ -44,6 +44,25 @@
 })();
 
 (function () {
+    document.querySelectorAll('.faq-question').forEach(function (question) {
+        var item = question.closest('.faq-item');
+
+        function toggle() {
+            var isOpen = item.classList.toggle('open');
+            question.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+
+        question.addEventListener('click', toggle);
+        question.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggle();
+            }
+        });
+    });
+})();
+
+(function () {
     function fallbackCopy(text) {
         var ta = document.createElement('textarea');
         ta.value = text;
