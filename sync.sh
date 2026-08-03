@@ -1,17 +1,16 @@
-REPO_DIR="${1:-.}"
-cd "$REPO_DIR" || { echo "Repo path not found: $REPO_DIR"; exit 1; }
+#!/data/data/com.termux/files/usr/bin/bash
 
-git pull
+REPO_DIR="${1:-.}"
+cd "$REPO_DIR" || exit 1
+
+git add -A
 
 CHANGED_FILES=$(git status --porcelain | awk '{print $2}' | tr '\n' ', ' | sed 's/, $//')
 
 if [ -z "$CHANGED_FILES" ]; then
-  echo "No changes to commit."
   exit 0
 fi
 
-git add -A
 git commit -m "Updated files: $CHANGED_FILES"
+git pull --rebase
 git push
-
-echo "Synced and committed: $CHANGED_FILES"
